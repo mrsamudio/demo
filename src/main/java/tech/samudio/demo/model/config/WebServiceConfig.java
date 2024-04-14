@@ -1,4 +1,4 @@
-package tech.samudio.demo;
+package tech.samudio.demo.model.config;
 
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -24,12 +24,12 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "countries")
+    @Bean(name = "pokemonssoap")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("CountriesPort");
+        wsdl11Definition.setPortTypeName("PokemonsPort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://spring.io/guides/gs-producing-web-service");
+        wsdl11Definition.setTargetNamespace("http://samudio.tech/demo");
         wsdl11Definition.setSchema(countriesSchema);
         return wsdl11Definition;
     }

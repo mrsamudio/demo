@@ -1,4 +1,4 @@
-package tech.samudio.demo.service;
+package tech.samudio.demo.model.source.datasource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

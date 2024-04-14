@@ -1,10 +1,7 @@
-package tech.samudio.demo.webservice;
-
-
-//import javax.xml.bind.annotation.XmlRegistry;
-
+package tech.samudio.demo.model.webservice.soap;
 
 import jakarta.xml.bind.annotation.XmlRegistry;
+import tech.samudio.demo.model.source.dtos.PokemonSoapDTO;
 
 /**
  * This object contains factory methods for each
@@ -32,27 +29,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetCountryRequest }
-     *
+     * Create an instance of {@link GetPokemonRequest }
+     * @return GetPokemonRequest
      */
-    public GetCountryRequest createGetCountryRequest() {
-        return new GetCountryRequest();
+    public GetPokemonRequest createGetPokemonRequest() {
+        return new GetPokemonRequest();
     }
 
     /**
-     * Create an instance of {@link GetCountryResponse }
-     *
+     * Create an instance of {@link GetPokemonResponse }
+     * @return GetPokemonResponse
      */
-    public GetCountryResponse createGetCountryResponse() {
-        return new GetCountryResponse();
+    public GetPokemonResponse createGetPokemonResponse() {
+        return new GetPokemonResponse();
     }
 
     /**
-     * Create an instance of {@link Country }
-     *
+     * Create an instance of {@link PokemonSoapDTO }
+     * @return PokemonSoapDTO
      */
-    public Country createCountry() {
-        return new Country();
+    public PokemonSoapDTO createPokemon() {
+        return new PokemonSoapDTO();
     }
 
 }
