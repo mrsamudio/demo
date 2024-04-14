@@ -2,8 +2,6 @@ package tech.samudio.demo.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlElementWrapper;
 import tech.samudio.demo.model.entity.pokemon.*;
 
 import java.util.List;

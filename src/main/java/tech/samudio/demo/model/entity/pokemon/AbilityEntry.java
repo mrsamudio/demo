@@ -2,7 +2,6 @@ package tech.samudio.demo.model.entity.pokemon;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import jakarta.xml.bind.annotation.XmlElement;
 
 @Entity
 public class AbilityEntry {

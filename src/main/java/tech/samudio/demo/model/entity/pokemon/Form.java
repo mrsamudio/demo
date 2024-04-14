@@ -3,8 +3,6 @@ package tech.samudio.demo.model.entity.pokemon;
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import tech.samudio.demo.model.entity.Pokemon;
 
 @Entity
 public class Form {

@@ -2,7 +2,6 @@ package tech.samudio.demo.model.webservice.rest;
 
 import tech.samudio.demo.model.entity.Pokemon;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GetAllPokemonResponse {

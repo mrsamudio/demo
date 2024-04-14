@@ -1,9 +1,9 @@
 package tech.samudio.demo.model.entity.pokemon;
 
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
-import tech.samudio.demo.model.entity.Pokemon;
+import jakarta.persistence.Basic;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Ability {
@@ -13,6 +13,14 @@ public class Ability {
     private String name;
     @Basic
     private String url;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
