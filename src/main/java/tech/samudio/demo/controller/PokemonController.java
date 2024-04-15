@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import tech.samudio.demo.model.entity.PokeResults;
 import tech.samudio.demo.model.entity.Pokemon;
-import tech.samudio.demo.model.source.datasource.PokemonRestService;
-
-import java.util.List;
+import tech.samudio.demo.model.webservice.PokemonRestService;
 
 @RestController
 public class PokemonController {
@@ -24,8 +23,8 @@ public class PokemonController {
         return pokemonRestService.getPokemonById(id);
     }
     @GetMapping("/pokemon")
-    public List<Pokemon> getPokemon(@RequestParam(defaultValue = "20") int limit,
-                                    @RequestParam(defaultValue = "0") int offset) {
+    public PokeResults getPokemon(@RequestParam(defaultValue = "20") int limit,
+                                  @RequestParam(defaultValue = "0") int offset) {
         return pokemonRestService.getAllPokemon(limit, offset);
     }
 }

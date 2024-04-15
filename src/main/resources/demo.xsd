@@ -5,8 +5,6 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="id" type="xs:string"/>
-<!--                <xs:element name="name" type="xs:string"/>-->
-<!--                <xs:element name="imageUrl" type="xs:string"/>-->
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -26,5 +24,28 @@
             <xs:element name="imageUrl" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:element name="getAllPokeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="limit" type="xs:int" minOccurs="0"/>
+                <xs:element name="offset" type="xs:int" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllPokeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokeResults" type="tns:pokeResults" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="pokeResults">
+        <xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+
 
 </xs:schema>

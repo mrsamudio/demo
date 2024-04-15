@@ -2,29 +2,12 @@ package tech.samudio.demo.model.webservice.soap;
 
 import jakarta.xml.bind.annotation.XmlRegistry;
 import tech.samudio.demo.model.source.dtos.PokemonSoapDTO;
+import tech.samudio.demo.model.entity.PokeResults;
 
-/**
- * This object contains factory methods for each
- * Java content interface and Java element interface
- * generated in the io.spring.guides.gs_producing_web_service package.
- * <p>An ObjectFactory allows you to programatically
- * construct new instances of the Java representation
- * for XML content. The Java representation of XML
- * content can consist of schema derived interfaces
- * and classes representing the binding of schema
- * type definitions, element declarations and model
- * groups.  Factory methods for each of these are
- * provided in this class.
- *
- */
+
 @XmlRegistry
 public class ObjectFactory {
 
-
-    /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: io.spring.guides.gs_producing_web_service
-     *
-     */
     public ObjectFactory() {
     }
 
@@ -50,6 +33,30 @@ public class ObjectFactory {
      */
     public PokemonSoapDTO createPokemon() {
         return new PokemonSoapDTO();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPokeRequest }
+     * @return GetAllPokeRequest
+     */
+    public GetAllPokeRequest createGetAllPokeRequest() {
+        return new GetAllPokeRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPokeResponse }
+     * @return GetAllPokeResponse
+     */
+    public GetAllPokeResponse createGetAllPokeResponse() {
+        return new GetAllPokeResponse();
+    }
+
+    /**
+     * Create an instance of {@link PokeResults }
+     * @return PokeResults
+     */
+    public PokeResults createPokeResults() {
+        return new PokeResults();
     }
 
 }

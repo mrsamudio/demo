@@ -22,8 +22,16 @@ public class PokemonEndpoint {
      @ResponsePayload
      public GetPokemonResponse getPokemon(@RequestPayload GetPokemonRequest request) {
          GetPokemonResponse response = new GetPokemonResponse();
-//         response.setPokemon(pokemonRepository.findPokemon(request.getId()));
          response.setPokemonSoapDTO(pokemonSoapService.getPokemonFromRestAndTransform(request.getId()));
+         return response;
+     }
+     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllPokeRequest")
+     @ResponsePayload
+     public GetAllPokeResponse getAllPokemon(@RequestPayload GetAllPokeRequest request) {
+         GetAllPokeResponse response = new GetAllPokeResponse();
+         String limit = request.getLimit();
+         String offset = request.getOffset();
+         response.setPokeResults(pokemonSoapService.getAllPokemonFromRest(limit, offset));
          return response;
      }
 
